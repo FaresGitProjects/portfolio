@@ -1,12 +1,23 @@
 <template>
   <div
-    class="pageheader flex border-b-2 border-solid border-l-gray-300 border-r-gray-300 border-b-zinc-400 p-1 pb-3 text-center text-xl font-bold text-blue-900 shadow-md drop-shadow-md"
+    class="pageheader 
+    flex 
+    border-b-2 
+    border-solid 
+    border-l-gray-300 
+    border-r-gray-300 
+    border-b-zinc-400 
+    p-1 pb-3 text-center 
+    text-xl font-bold 
+    text-blue-900 
+    shadow-md drop-shadow-md"
   >
     <router-link
       to="/"
       id="home"
-      class="btn home home-active grow text-right hover:cursor-pointer"
-      v-on:click="toggleActive"
+      class="btn home grow text-right hover:cursor-pointer"
+
+      v-bind:class="{ 'home-active': $route.path === '/' }"
     >
       <h1>Home</h1>
     </router-link>
@@ -15,7 +26,8 @@
       to="/about"
       id="about"
       class="btn about grow hover:cursor-pointer"
-      v-on:click="toggleActive"
+
+      v-bind:class="{ 'about-active': $route.path === '/about' }"
     >
       <h1>About Me</h1>
     </router-link>
@@ -24,7 +36,8 @@
       to="/contact"
       id="contact"
       class="btn contact grow text-left hover:cursor-pointer"
-      v-on:click="toggleActive"
+
+      v-bind:class="{ 'contact-active': $route.path === '/contact' }"
     >
       <h1>Contact</h1>
     </router-link>

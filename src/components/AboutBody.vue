@@ -1,5 +1,5 @@
 <template>
-  <div class="pagebody flex h-screen">
+  <div class="pagebody flex">
     <div
       class="pic-bg mx-auto mt-10 md:mt-16 flex flex-wrap h-72 w-72 items-center justify-center rounded-full border-t-gray-300 border-b-gray-300 border-l-gray-900 border-r-gray-900 shadow-3xl"
     >
@@ -8,8 +8,7 @@
         src="@/assets/images/Profile-Pic.jpg"
         alt="Image of Fares"
       />
-      <MessageBox class="-translate-x-80 -translate-y-8" />
-      
+
       <div
         class="portfolio-list absolute top-1/2 left-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2"
       >
@@ -65,12 +64,10 @@
 </template>
 
 <script>
-import MessageBox from "@/components/MessageBox.vue";
 
 export default {
   name: "PageBody",
   components: {
-    MessageBox,
   },
 };
 </script>
@@ -79,9 +76,5 @@ export default {
 <style scoped>
 .portfolio-list > div {
   border-width: 8px;
-}
-
-* {
-  /* border: 1px solid blue; */
 }
 </style>
