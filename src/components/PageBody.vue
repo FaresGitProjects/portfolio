@@ -36,7 +36,7 @@
       />
 
       <div
-        class="portfolio-list absolute top-1/2 left-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2"
+        class="portfolio-list absolute pt-24 left-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2"
       >
         <div
           class="github absolute flex h-28 w-28 -translate-x-52 translate-y-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-8 hover:border-l-teal-600 hover:border-t-teal-600"
@@ -162,8 +162,8 @@ export default {
       var boxList = msgbox2.classList;
       var hoverList = e.currentTarget.classList;
 
-      console.log("Hover-e", e.currentTarget);
-      console.log("Hover-msg", msgbox2);
+      // console.log("Hover-e", e.currentTarget);
+      // console.log("Hover-msg", msgbox2);
 
       this.activeList = boxList;
       if (hoverList.contains("bitter")) {
@@ -207,9 +207,20 @@ export default {
   opacity: 0;
   transition: all .3s ease-out;
 }
-
 .portfolio-list > div {
   border-width: 8px;
 }
 
+.fade-left {
+  animation: fade-out-left .3s ease-in-out;
+}
+@keyframes fade-out-left {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+}
 </style>

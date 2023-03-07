@@ -1,23 +1,12 @@
 <template>
   <div
-    class="pageheader 
-    flex 
-    border-b-2 
-    border-solid 
-    border-l-gray-300 
-    border-r-gray-300 
-    border-b-zinc-400 
-    p-1 pb-3 text-center 
-    text-xl font-bold 
-    text-blue-900 
-    shadow-md drop-shadow-md"
+    class="pageheader flex border-b-2 border-solid border-l-gray-300 border-r-gray-300 border-b-zinc-400 p-1 pb-3 text-center text-xl font-bold text-blue-900 shadow-md drop-shadow-md"
   >
     <router-link
       to="/"
       id="home"
       class="btn home grow text-right hover:cursor-pointer"
-
-      v-bind:class="{ 'home-active': $route.path === '/' }"
+      v-bind:class="{ 'home-active': activePage === 'home' }"
     >
       <h1>Home</h1>
     </router-link>
@@ -26,8 +15,7 @@
       to="/about"
       id="about"
       class="btn about grow hover:cursor-pointer"
-
-      v-bind:class="{ 'about-active': $route.path === '/about' }"
+      v-bind:class="{ 'about-active': activePage === 'about' }"
     >
       <h1>About Me</h1>
     </router-link>
@@ -36,8 +24,7 @@
       to="/contact"
       id="contact"
       class="btn contact grow text-left hover:cursor-pointer"
-
-      v-bind:class="{ 'contact-active': $route.path === '/contact' }"
+      v-bind:class="{ 'contact-active': activePage === 'contact' }"
     >
       <h1>Contact</h1>
     </router-link>
@@ -45,26 +32,41 @@
 </template>
 
 <script>
+import { store } from "@/main.js";
+
 export default {
   name: "PageHeader",
   data() {
     return {
-      activePage: "home",
+      // activePage: store.getters.getActivePage,
     };
   },
-  methods: {
-    toggleActive(e) {
-      const currentId = e.currentTarget.id;
-      if (currentId !== this.activePage) {
-        const activeElement = document.getElementById(this.activePage);
-        const activeClass = this.activePage + "-active";
-        activeElement.classList.remove(activeClass);
-        const newActiveClass = currentId + "-active";
-        e.currentTarget.classList.add(newActiveClass);
-        this.activePage = currentId;
-      }
+  // created() {
+  //   console.log("activePage:", this.activePage)
+  // },
+  computed: {
+    activePage() {
+      console.log("Computed:", this.activePage);
+      return store.getters.getActivePage;
     },
   },
+  methods: {
+    // updatePage() {
+    //   this.$store.commit('updatePage')
+    //   console.log("store updated")
+    // }
+  },
+  // toggleActive(e) {
+  //   const currentId = e.currentTarget.id;
+  //   if (currentId !== this.activePage) {
+  //     const activeElement = document.getElementById(this.activePage);
+  //     const activeClass = this.activePage + "-active";
+  //     activeElement.classList.remove(activeClass);
+  //     const newActiveClass = currentId + "-active";
+  //     e.currentTarget.classList.add(newActiveClass);
+  //     this.activePage = currentId;
+  //   }
+  // },
 };
 </script>
 
