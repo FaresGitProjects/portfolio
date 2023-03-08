@@ -16,7 +16,7 @@
 
         <div class="portfolio-list mb-5">
           <div
-            class="m-auto h-28 w-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-b-teal-600 hover:border-r-teal-600"
+            class="m-auto h-28 w-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-l-teal-600 hover:border-r-teal-600"
             v-on:mouseover="hoverDisplay"
             v-on:mouseleave="leaveExit"
           >
@@ -34,7 +34,7 @@
         </div>
         <div class="portfolio-list">
           <div
-            class="m-auto h-28 w-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-b-teal-600 hover:border-r-teal-600"
+            class="m-auto h-28 w-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-b-teal-600 hover:border-t-teal-600"
             v-on:mouseover="hoverDisplay"
             v-on:mouseleave="leaveExit"
           >
