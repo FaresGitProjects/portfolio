@@ -9,20 +9,21 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faHeart, faCrow } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faHeart, faCrow, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import router from './router'
 import './index.css'
 import { createStore } from 'vuex'
 
 /* add icons to the library */
-library.add(faHeart, faGithub, faCrow)
+library.add(faHeart,faEnvelope, faGithub, faCrow, faLinkedin)
 
 
 export const store = createStore({
     state() {
         return {
-            activePage: "home"
+            activePage: "home",
+            isAnimating: false
         }
     },
     mutations: {
@@ -39,7 +40,7 @@ export const store = createStore({
             return state.activePage
         },
         isAnimating: (state) => {
-            state.isAnimating
+            return state.isAnimating
         }
     }
 })

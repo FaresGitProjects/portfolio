@@ -16,3 +16,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+
+
+/* .aboutPage {
+  height: 100%;
+  border: black 5px solid;
+} */
+
+</style>

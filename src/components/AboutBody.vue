@@ -1,80 +1,222 @@
 <template>
-  <div class="pagebody flex">
+  <div
+    class="aboutbody mt-14 flex h-full flex-col items-center justify-items-center sm:mt-10 sm:flex-row"
+  >
+    <!-- React.js, Vue.js 
+         Tailwind  MySQL
+          -->
+    <!-- C#, C++
+         Java Python
+          -->
     <div
-      class="pic-bg mx-auto mt-10 md:mt-16 flex flex-wrap h-72 w-72 items-center justify-center rounded-full border-t-gray-300 border-b-gray-300 border-l-gray-900 border-r-gray-900 shadow-3xl"
+      class="left-container order-2 flex h-full flex-wrap justify-center sm:order-1 sm:mb-10 sm:w-1/3 sm:gap-y-10"
     >
-      <img
-        class="h-64 w-64 rounded-full"
-        src="@/assets/images/Profile-Pic.jpg"
-        alt="Image of Fares"
-      />
+      <div class="skill react basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="m-auto h-20 w-20"
+          src="@/assets/images/react.png"
+          alt="react icon"
+        />
+      </div>
+      </div>
+      <div class="skill vue basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="m-auto h-16 w-16"
+          src="@/assets/images/vue.png"
+          alt="vue icon"
+        />
+      </div>
+      </div>
+      <div class="skill tailwind basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="h-16 w-20"
+          src="@/assets/images/tailwind.png"
+          alt="tailwind icon"
+        />
+      </div>
+      </div>
+      <div class="skill mysql basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="h-16 w-16"
+          src="@/assets/images/mysql.png"
+          alt="mysql icon"
+        />
+      </div>
+      </div>
+    </div>
 
-      <div
-        class="portfolio-list absolute pt-24 left-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2"
-      >
-        <div
-          class="shout-box absolute flex h-28 w-28 -translate-x-52 translate-y-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-8 hover:border-l-teal-600 hover:border-t-teal-600"
-        >
-          <a
-            class="flex h-full w-full"
-            href="https://github.com/FaresGitProjects/Shout-Box-Chat-App"
-            target="_blank"
-          >
-            <font-awesome-icon
-              class="black m-auto h-1/2 w-1/2"
-              icon="fa-brands fa-github"
-            />
-          </a>
+    <div
+      class="center-container order-1 flex min-w-min flex-col px-10 sm:px-0 pb-4 mb-10 sm:order-2 sm:w-1/3"
+    >
+      <div class="about-title">
+        <h1 class="text-center font-bold text-xl">Who Am I?</h1>
+      </div>
+      <br>
+      <div class="about-paragraph text-sm">
+        <p class="indent-5 mb-3">
+          As a dynamic and innovative Computer Science graduate from the University at Buffalo, 
+          I am passionate about using my skills to solve complex problems and drive meaningful change.
+          I'm an avid and voracious learner with an unrelenting passion for 
+          innovation and problem-solving. To me, problems and puzzles are the 
+          canvas onto which I can channel my creative and intellectual needs.
+          Like an athlete who seeks both career and cope through their exertions, 
+          thinking and creativity are my exercises, be it of the mind, that lend
+          me everything from my career prospects, to my place of solitude.
+        </p>
+        <p class="indent-5 mb-3">Through academic coursework, personal projects and commercial endeavors I've
+          accumulated years of valuable experience that have prepared to take on the
+          evolving and ever-changing technology industry.
+        </p>
+        <p class="indent-5">
+          On the left, are my core web development skills. On the right are my top 4 programming languages,
+          all of which I've been programming with since high school!
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="right-container order-3 flex h-full flex-wrap justify-center sm:order-3 sm:mb-10 sm:w-1/3 sm:gap-y-10"
+    >
+      <div class="skill cs basis-1/2">
+        <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+          <img class="h-20 w-20" src="@/assets/images/cs.png" alt="C# icon" />
         </div>
-        <div
-          class="bitter absolute flex h-28 w-28 translate-x-52 translate-y-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-t-teal-600 hover:border-r-teal-600"
-        >
-          <font-awesome-icon
-            class="m-auto h-1/2 w-1/2 rounded-full text-red-500"
-            icon="fa-solid fa-crow"
-          />
-        </div>
-        <div
-          class="fakazon absolute h-28 w-28 -translate-x-28 translate-y-52 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-l-teal-600 hover:border-b-teal-600"
-        >
-          <a href="https://faresgitprojects.github.io/Fakazon/" target="_blank">
-            <img
-              class="h-full w-full rounded-full"
-              src="@/assets/images/Fakazon_arrow.jpg"
-            />
-          </a>
-        </div>
-        <div
-          class="ratemypartner absolute flex h-28 w-28 translate-x-28 translate-y-52 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-b-teal-600 hover:border-r-teal-600"
-        >
-          <a
-            class="flex h-full w-full"
-            href="https://faresgitprojects.github.io/RateMyPartner/"
-            target="_blank"
-          >
-            <font-awesome-icon
-              class="m-auto h-1/2 w-1/2 text-red-500"
-              icon="fa-solid fa-heart"
-            />
-          </a>
-        </div>
+      </div>
+      <div class="skill cpp basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="h-20 w-20"
+          src="@/assets/images/cpp.png"
+          alt="C++ icon"
+        />
+      </div>
+      </div>
+      <div class="skill java basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="h-16 w-16"
+          src="@/assets/images/java.png"
+          alt="java icon"
+        />
+      </div>
+      </div>
+      <div class="skill python basis-1/2">
+      <div class="skill-container m-auto flex h-28 w-28 items-center justify-center">
+        <img
+          class="h-16 w-16"
+          src="@/assets/images/python.png"
+          alt="python icon"
+        />
+      </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: "PageBody",
-  components: {
-  },
+  name: "AboutBody",
+  components: {},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.portfolio-list > div {
-  border-width: 8px;
+/* * {
+  border: 2px solid blue;
 }
+
+.aboutbody {
+  border: 2px solid red;
+}
+.center-container {
+  border: 2px solid orange;
+}
+.left-container {
+  border-color: green;
+} */
+
+.skill-container {
+  border: 8px rgb(209, 213, 219) solid;
+  border-radius: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.react > .skill-container,
+.vue   > .skill-container,
+.tailwind > .skill-container,
+.mysql > .skill-container,
+.python > .skill-container,
+.cs > .skill-container,
+.java> .skill-container,
+.cpp > .skill-container
+{
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.react > .skill-container:hover,
+.vue   > .skill-container:hover,
+.tailwind > .skill-container:hover,
+.mysql > .skill-container:hover,
+.python > .skill-container:hover,
+.cs > .skill-container:hover,
+.java> .skill-container:hover,
+.cpp > .skill-container:hover
+{
+  transition: all ease-out reverse;
+}
+.vue   > .skill-container:hover {
+  transform: rotate(-45deg);
+  border-bottom-color: rgb(78, 190, 115);
+  border-top-color: rgb(81, 84, 116);
+}
+.react > .skill-container:hover {
+  transform: rotate(45deg);
+  border-color: #61DAFC;
+}
+.tailwind   > .skill-container:hover {
+  transform: rotate(-20deg);
+  border-top-color: #18B9B9;
+  border-bottom-color: #18B9B9;
+}
+.mysql > .skill-container:hover {
+  border-right-color: #F8981C;
+  border-left-color: #5b889b;
+  transform: rotate(-60deg);
+}
+.cs   > .skill-container:hover {
+  border-bottom-color: #671f7a;
+  border-left-color: #953DAC;
+  border-top-color: #953DAC;
+  border-right-color: #822A98;
+  transform: rotate(120deg);
+}
+.cpp > .skill-container:hover {
+  
+  border-color: #0080cd;
+  border-bottom-color: #00549e;
+  transform: rotate(720deg);
+}
+.java  > .skill-container:hover {
+  border-top-color: #FC653A;
+  
+  border-bottom-color: #2F6DB7;
+  transform: rotate(100deg);
+}
+.python > .skill-container:hover {
+  transform: rotate(-30deg);
+  border-bottom-color: #FFD342;
+  border-right-color: #FFD342;
+  border-top-color: #3773A5;
+  border-left-color: #3773A5;
+}
+
+
+
+
 </style>

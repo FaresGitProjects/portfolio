@@ -10,20 +10,9 @@ import { store } from '@/main'
 // Emit an event to update the data variable in MyComponent.vue
 
 
-function fadeHome(next) {
-  // Set the isAnimating state property to true at the start of the animation
-  store.commit('isAnimating', true)
-
-  var elList = document.querySelector('.pagebody').classList
-  elList.add('fade-left')
-
-  setTimeout(() => {
-    // Set the isAnimating state property to false once the animation completes
-    store.commit('animation/setIsAnimating', false)
-
-    elList.remove('fade-left')
-    next()
-  }, 1000)
+function fadeHomeLeft() {
+  // var homeClasses = document.querySelector('.pagebody').classList
+  // homeClasses.add('fade-left')
 }
 
 const routes = [
@@ -32,15 +21,10 @@ const routes = [
     name: 'home',
     component: PageBody,
     beforeEnter: (from, to, next) => {
-      console.log("before Enter home")
+      console.log("before ENTER", store.getters.isAnimating)
+      store.commit("setIsAnimating", false)
       store.commit("updatePage", "home")
-
-      console.log("debug-fade")
-
-      setTimeout(() => {
-        next(() => {
-        });
-      }, 1000); 
+      next()
     }
   },
   {
@@ -48,11 +32,14 @@ const routes = [
     name: 'about', 
     component: AboutBody,
     beforeEnter: (from, to, next) => {
-      console.log("before Enter about")
+      // navigation approved - proceed to animation
+      fadeHomeLeft()
       store.commit("updatePage", "about")
-
-      // setTimeout(1000)
-      fadeHome(next)
+      setTimeout(() => {
+        store.commit("setIsAnimating", false)
+        // Animation Completed open up for additonal routing
+        next()
+      }, 300)
     }
   },
   {
@@ -60,14 +47,12 @@ const routes = [
     name: 'contact',
     component: ContactBody,
     beforeEnter: (from, to, next) => {
-      console.log("before Enter contact")
-
-      var elList = document.querySelector('.pagebody').classList
-      elList.add('fade-left');
+      store.commit("updatePage", "contact")
       setTimeout(() => {
-        next(() => {
-        });
-      }, 1000); 
+        store.commit("setIsAnimating", false)
+        // Animation Completed open up for additonal routing
+        next()
+      }, 300)
     }
   }
 ]
@@ -80,15 +65,23 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (store.getters.isAnimating) {
-    // If an animation is currently running, cancel the navigation
-    return false
-  } else {
-    store.commit("updatePage", to.name)
-    console.log("testing to", to)
-    // Otherwise, allow the navigation to proceed
+  console.log("before each")
+  console.log("animating?", store.getters.isAnimating)
+  if(store.getters.isAnimating) {
+    // Animation in-progress - naviagation denied, do not change ActivePage
+    console.log("Navigation gaurded")
+    
+    console.log("animated?", store.getters.isAnimating)
+    next(false)
+  } 
+  else {
+    store.commit("setIsAnimating", true)
+    console.log("animated?", store.getters.isAnimating)
     next()
+    // Proceed to navigation
   }
+  
+ 
 })
 
 

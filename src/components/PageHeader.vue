@@ -6,7 +6,7 @@
       to="/"
       id="home"
       class="btn home grow text-right hover:cursor-pointer"
-      v-bind:class="{ 'home-active': activePage === 'home' }"
+      v-bind:class="{ 'home-active': activePage == 'home' }"
     >
       <h1>Home</h1>
     </router-link>
@@ -15,16 +15,16 @@
       to="/about"
       id="about"
       class="btn about grow hover:cursor-pointer"
-      v-bind:class="{ 'about-active': activePage === 'about' }"
+      v-bind:class="{ 'about-active': activePage == 'about' }"
     >
-      <h1>About Me</h1>
+      <h1>About Me: {{activePage}}</h1>
     </router-link>
 
     <router-link
       to="/contact"
       id="contact"
       class="btn contact grow text-left hover:cursor-pointer"
-      v-bind:class="{ 'contact-active': activePage === 'contact' }"
+      v-bind:class="{ 'contact-active': activePage == 'contact' }"
     >
       <h1>Contact</h1>
     </router-link>
