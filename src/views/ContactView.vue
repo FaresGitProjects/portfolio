@@ -1,5 +1,5 @@
 <template>
-  <div class="homePage">
+  <div class="contactPage flex justify-center">
     <ContactBody />
   </div>
 </template>

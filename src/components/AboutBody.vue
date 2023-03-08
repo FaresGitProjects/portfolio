@@ -64,7 +64,7 @@
           innovation and problem-solving. To me, problems and puzzles are the 
           canvas onto which I can channel my creative and intellectual needs.
           Like an athlete who seeks both career and cope through their exertions, 
-          thinking and creativity are my exercises, be it of the mind, that lend
+          thinking and creativity are my exercises of the mind, that lend
           me everything from my career prospects, to my place of solitude.
         </p>
         <p class="indent-5 mb-3">Through academic coursework, personal projects and commercial endeavors I've
@@ -73,7 +73,7 @@
         </p>
         <p class="indent-5">
           On the left, are my core web development skills. On the right are my top 4 programming languages,
-          all of which I've been using with since high school!
+          all of which I've been using since high school!
         </p>
       </div>
     </div>
@@ -206,7 +206,7 @@ export default {
   border-top-color: #FC653A;
   
   border-bottom-color: #2F6DB7;
-  transform: rotate(-90deg);
+  transform: rotate(70deg);
 }
 .python > .skill-container:hover {
   transform: rotate(-30deg);

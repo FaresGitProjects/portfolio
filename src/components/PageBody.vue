@@ -59,10 +59,15 @@
           v-on:mouseleave="leaveExit"
           class="bitter absolute flex h-28 w-28 translate-x-52 translate-y-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-t-teal-600 hover:border-r-teal-600"
         >
+        <a
+          class="flex h-full w-full"
+          href="https://faresgitprojects.github.io/#/" 
+          target="_blank">
           <font-awesome-icon
             class="m-auto h-1/2 w-1/2 rounded-full text-red-500"
             icon="fa-solid fa-crow"
           />
+        </a>
         </div>
         <div
           class="fakazon absolute h-28 w-28 -translate-x-28 translate-y-52 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-l-teal-600 hover:border-b-teal-600"
@@ -150,7 +155,7 @@ export default {
         feats. There\'s a bit going on there, but it mainly demonstrates my adeptness in\
         my core tech stack, C#, C++, Java, Python and MySQL. Some notable projects are \
         Shout-Box, Malloc, C# server-side code and CLAT. For better insight into my web \
-        development abilities, see my "about" page!',
+        development abilities, see my "About Me" page!',
       },
       activeList: {},
       activeElement: {},
@@ -191,7 +196,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style   >
+<style>
 .msgbox2 {
   opacity: 0;
   transform: translateY(1rem) translateX(20rem);
