@@ -5,7 +5,7 @@
   >
     <h1 class="title mb-4 text-2xl whitespace-nowrap">
       <Transition>
-        <span v-if="showHello && firstRender" class="hello font-semibold">{{greeting}}.</span>
+        <span v-if="showHello && firstRender" class="hello font-bold">{{greeting}}.</span>
         <span v-else 
               class="elsehello font-bold"
               :class="{ 'opacity-0': firstRender, 'opacity-1': !firstRender}">{{greeting}}.</span>

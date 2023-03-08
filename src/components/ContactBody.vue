@@ -1,6 +1,6 @@
 <template>
   <div
-    class="contactbody mt-14 flex h-full flex-col items-center justify-items-center sm:mt-10 sm:flex-row"
+    class="contactbody mt-14 mx-20 flex h-full flex-col items-center justify-items-center sm:mt-10 sm:flex-row"
   >
     <div
       class="center-container order-1 m-auto mb-10 flex min-w-min flex-col px-10 pb-4 sm:order-2 sm:w-1/3 sm:px-0"
@@ -67,5 +67,16 @@ export default {
 .linkedin-icon {
   color: #0A66C2
 }
-
+.fade-right {
+  animation: fade-out-right  .2s ease-in-out;
+}
+@keyframes fade-out-right {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+}
 </style>

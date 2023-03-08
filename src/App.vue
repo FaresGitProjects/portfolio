@@ -5,7 +5,7 @@
 
     <PageHeader />
 
-    <Transition name="fade-left">
+    <Transition>
       <router-view />
     </Transition>
   </div>
@@ -22,7 +22,9 @@ export default {
 };
 </script>
 
+
 <style>
+
 @media (max-width: 555px) {
   img {
     position: static;
@@ -59,4 +61,17 @@ export default {
     margin-bottom: 12.5px;
   }
 }
+
+
+/* .fade-in {
+  animation: fade-in-entry .3s ease-in-out;
+}
+@keyframes fade-in-entry {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
 </style>

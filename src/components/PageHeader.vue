@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pageheader flex border-b-2 border-solid border-l-gray-300 border-r-gray-300 border-b-zinc-400 p-1 pb-3 text-center text-xl font-bold text-blue-900 shadow-md drop-shadow-md"
+    class="pageheader flex border-b-2 border-solid border-l-gray-300 border-r-gray-300 border-b-zinc-400 p-1 pt-2 pb-3 text-center text-xl font-bold text-blue-900 shadow-md drop-shadow-md"
   >
     <router-link
       to="/"
@@ -17,7 +17,7 @@
       class="btn about grow hover:cursor-pointer"
       v-bind:class="{ 'about-active': activePage == 'about' }"
     >
-      <h1>About Me: {{activePage}}</h1>
+      <h1>About Me</h1>
     </router-link>
 
     <router-link

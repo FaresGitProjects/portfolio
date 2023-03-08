@@ -212,7 +212,7 @@ export default {
 }
 
 .fade-left {
-  animation: fade-out-left .3s ease-in-out;
+  animation: fade-out-left .2s ease-in-out;
 }
 @keyframes fade-out-left {
   from {

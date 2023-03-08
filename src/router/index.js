@@ -11,8 +11,16 @@ import { store } from '@/main'
 
 
 function fadeHomeLeft() {
-  // var homeClasses = document.querySelector('.pagebody').classList
-  // homeClasses.add('fade-left')
+  var homeClasses = document.querySelector('.pagebody').classList
+  homeClasses.add('fade-left')
+}
+function fadeAboutAway() {
+  var contactClasses = document.querySelector('.aboutbody').classList
+  contactClasses.add('fade-out')
+}
+function fadeContactRight() {
+  var contactClasses = document.querySelector('.contactbody').classList
+  contactClasses.add('fade-right')
 }
 
 const routes = [
@@ -21,10 +29,13 @@ const routes = [
     name: 'home',
     component: PageBody,
     beforeEnter: (from, to, next) => {
-      console.log("before ENTER", store.getters.isAnimating)
-      store.commit("setIsAnimating", false)
+
       store.commit("updatePage", "home")
-      next()
+      setTimeout(() => {
+        store.commit("setIsAnimating", false)
+        // Animation Completed open up for additonal routing
+        next()
+      }, 190)
     }
   },
   {
@@ -33,13 +44,12 @@ const routes = [
     component: AboutBody,
     beforeEnter: (from, to, next) => {
       // navigation approved - proceed to animation
-      fadeHomeLeft()
       store.commit("updatePage", "about")
       setTimeout(() => {
         store.commit("setIsAnimating", false)
         // Animation Completed open up for additonal routing
         next()
-      }, 300)
+      }, 190)
     }
   },
   {
@@ -47,12 +57,13 @@ const routes = [
     name: 'contact',
     component: ContactBody,
     beforeEnter: (from, to, next) => {
+
       store.commit("updatePage", "contact")
       setTimeout(() => {
         store.commit("setIsAnimating", false)
         // Animation Completed open up for additonal routing
         next()
-      }, 300)
+      }, 190)
     }
   }
 ]
@@ -77,6 +88,22 @@ router.beforeEach((to, from, next) => {
   else {
     store.commit("setIsAnimating", true)
     console.log("animated?", store.getters.isAnimating)
+
+    switch (from.name) {
+      case "home":
+        fadeHomeLeft();
+        break;
+      case "about":
+        fadeAboutAway();
+        break;
+      case "contact":
+        fadeContactRight();
+        break;
+      default :
+        console.log("Switch Failure")
+    }
+
+
     next()
     // Proceed to navigation
   }
