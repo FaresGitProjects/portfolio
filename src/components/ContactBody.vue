@@ -22,6 +22,7 @@
           >
             <a
               class="flex h-full w-full"
+              id="linked-id"
               href="https://www.linkedin.com/in/fares-mo/"
               target="_blank"
             >
@@ -32,7 +33,7 @@
             </a>
           </div>
         </div>
-        <div class="portfolio-list">
+        <div id="mail-id" class="portfolio-list ">
           <div
             class="m-auto h-28 w-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-b-teal-600 hover:border-t-teal-600"
             v-on:mouseover="hoverDisplay"

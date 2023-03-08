@@ -50,7 +50,7 @@
     </div>
 
     <div
-      class="center-container order-1 flex min-w-min flex-col px-10 sm:px-0 pb-4 mb-10 sm:order-2 sm:w-1/3"
+      class="center-container order-1 flex min-w-min flex-col px-10 sm:px-2 pb-4 mb-10 sm:order-2 sm:w-1/3"
     >
       <div class="about-title">
         <h1 class="text-center font-bold text-xl">Insightful Innovator, <br> Lifelong Learner.</h1>

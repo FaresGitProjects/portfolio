@@ -38,7 +38,7 @@ export default {
     transform: translate(0, 0) !important;
     display: flex !important;
     flex-wrap: wrap;
-    position: absolute !important;
+    /* position: absolute !important; */
     width: 100% !important;
     height: fit-content !important;
     margin: 0 auto !important;
