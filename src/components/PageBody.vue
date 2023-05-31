@@ -1,18 +1,7 @@
 <template>
   <div class="pagebody flex">
     <div
-      class="pic-bg 
-      mx-auto mt-10 
-      flex h-72 w-72 
-      flex-wrap 
-      items-center 
-      justify-center 
-      rounded-full
-      border-t-gray-300
-      border-b-gray-300
-      border-l-gray-900 
-      border-r-gray-900 
-      shadow-3xl md:mt-16"
+      class="pic-bg mx-auto mt-10 flex h-72 w-72 flex-wrap items-center justify-center rounded-full border-t-gray-300 border-b-gray-300 border-l-gray-900 border-r-gray-900 shadow-3xl md:mt-16"
     >
       <img
         class="h-64 w-64 rounded-full"
@@ -36,7 +25,7 @@
       />
 
       <div
-        class="portfolio-list absolute pt-24 left-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2"
+        class="portfolio-list absolute left-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 pt-24"
       >
         <div
           class="github absolute flex h-28 w-28 -translate-x-52 translate-y-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-8 hover:border-l-teal-600 hover:border-t-teal-600"
@@ -59,15 +48,16 @@
           v-on:mouseleave="leaveExit"
           class="bitter absolute flex h-28 w-28 translate-x-52 translate-y-28 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-t-teal-600 hover:border-r-teal-600"
         >
-        <a
-          class="flex h-full w-full"
-          href="https://faresgitprojects.github.io/#/" 
-          target="_blank">
-          <font-awesome-icon
-            class="m-auto h-1/2 w-1/2 rounded-full text-red-500"
-            icon="fa-solid fa-crow"
-          />
-        </a>
+          <a
+            class="flex h-full w-full"
+            href="https://faresgitprojects.github.io/#/"
+            target="_blank"
+          >
+            <font-awesome-icon
+              class="m-auto h-1/2 w-1/2 rounded-full text-red-500"
+              icon="fa-solid fa-pizza-slice"
+            />
+          </a>
         </div>
         <div
           class="fakazon absolute h-28 w-28 -translate-x-28 translate-y-52 cursor-pointer rounded-full border-gray-300 duration-150 ease-out hover:border-l-teal-600 hover:border-b-teal-600"
@@ -123,23 +113,23 @@ export default {
       data: {},
 
       Bitter: {
-        greeting2: "Bitter",
-        intro2: " A Bad Twitter",
-        msg2: "A parody of the soon-to-be defunct circus of\
-        chaos that is the Twitter platform. Bitter invites you\
-        to divulge, spew and cough up whatever maddening thoughts\
-        are swirling to the surface of your mind! Let the world in \
-        on the volcanic festivity that is your thoughts and impulses!",
+        greeting2: "Joes Pizza",
+        intro2: " A Practical Venture",
+        msg2: "A proper full-stack commercial website for my dad's pizza shop\
+        intended to save thousands on delivery service platform fees like\
+        Uber and Doordash. The site features payment processing and backend business logic where orders are database stored \
+        and relayed to an authorized dashboard (i.e. my dad) where they are fulfilled and then\
+         sent out for delivery (or pickup)!",
       },
       RateMyPartner: {
         greeting2: "RateMyPartner",
         intro2: " Indexing Love",
-        msg2: "What started out as a parody turned aspirational commercial \
+        msg2: 'What started out as a parody turned aspirational commercial \
         goal. RateMyPartner (RMP), is a lofty goal inspired by RateMyProfessor.\
         Essentially, it seeks to be a semi-comical social media site whereby lovers\
-        can \"rate\" their partners by commenting on the progress made in their relationship.\
+        can "rate" their partners by commenting on the progress made in their relationship.\
         The ultimate objective being to improve relationship quality by sharing experiences.\
-        "
+        ',
       },
       Fakazon: {
         greeting2: "Fake Amazon",
@@ -200,24 +190,24 @@ export default {
 .msgbox2 {
   opacity: 0;
   transform: translateY(1rem) translateX(20rem);
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .msgbox2.show {
   transform: translateY(-2rem) translateX(20rem);
   opacity: 1;
-  transition: transform .5s ease-out;
+  transition: transform 0.5s ease-out;
 }
 .msgbox2.hide {
   transform: translateY(-0rem) translateX(20rem);
   opacity: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .portfolio-list > div {
   border-width: 8px;
 }
 
 .fade-left {
-  animation: fade-out-left .2s ease-in-out;
+  animation: fade-out-left 0.2s ease-in-out;
 }
 @keyframes fade-out-left {
   from {
