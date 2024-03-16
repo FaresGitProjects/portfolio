@@ -103,7 +103,6 @@ router.beforeEach((to, from, next) => {
         console.log("Switch Failure")
     }
 
-
     next()
     // Proceed to navigation
   }
