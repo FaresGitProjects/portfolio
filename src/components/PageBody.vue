@@ -13,7 +13,7 @@
         :greeting="greeting"
         :intro="intro"
         :animate="true"
-        class="-translate-x-80 -translate-y-8"
+        class="-translate-x-80 -translate-y-8 mr-16"
       />
 
       <MessageBox
@@ -21,7 +21,7 @@
         :greeting="data.greeting2"
         :intro="data.intro2"
         :justify="'text-right'"
-        class="msgbox2 translate-x-80 translate-y-8"
+        class="msgbox2 translate-x-80 translate-y-8 ml-16"
       />
 
       <div
