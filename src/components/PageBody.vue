@@ -51,7 +51,7 @@
         >
           <a
             class="flex h-full w-full"
-            href="https://faresgitprojects.github.io/#/"
+            href="https://faresgitprojects.github.io/JoesHubVersion"
             target="_blank"
           >
             <font-awesome-icon
