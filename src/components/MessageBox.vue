@@ -3,7 +3,7 @@
     class="messagebox text-md absolute z-10 ml-2 min-h-max w-1/4 max-[870px]:hidden"
     :class="justify"
   >
-    <h1 class="title mb-4 text-2xl whitespace-nowrap">
+    <h1 class="title mb-4 text-2xl whitespace-wrap">
       <Transition>
         <span v-if="showHello && firstRender" class="hello font-bold">{{greeting}}.</span>
         <span v-else 

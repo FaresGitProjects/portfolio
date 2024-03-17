@@ -13,6 +13,7 @@ import {
   faCrow,
   faEnvelope,
   faPizzaSlice,
+  faCar
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import router from "./router";
@@ -20,7 +21,7 @@ import "./index.css";
 import { createStore } from "vuex";
 
 /* add icons to the library */
-library.add(faHeart, faEnvelope, faGithub, faCrow, faLinkedin, faPizzaSlice);
+library.add(faCar, faHeart, faEnvelope, faGithub, faCrow, faLinkedin, faPizzaSlice);
 
 export const store = createStore({
   state() {

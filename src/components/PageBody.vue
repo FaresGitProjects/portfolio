@@ -13,6 +13,7 @@
         :greeting="greeting"
         :intro="intro"
         :animate="true"
+        :justify="'text-left'"
         class="-translate-x-80 -translate-y-8 mr-16"
       />
 
@@ -21,7 +22,7 @@
         :greeting="data.greeting2"
         :intro="data.intro2"
         :justify="'text-right'"
-        class="msgbox2 translate-x-80 translate-y-8 ml-16"
+        class="msgbox2 translate-x-80 translate-y-8 ml-24"
       />
 
       <div
@@ -78,12 +79,12 @@
         >
           <a
             class="flex h-full w-full"
-            href="https://faresgitprojects.github.io/RateMyPartner/"
+            href="https://luxurious-ride.com"
             target="_blank"
           >
             <font-awesome-icon
-              class="m-auto h-1/2 w-1/2 text-red-500"
-              icon="fa-solid fa-heart"
+              class="m-auto h-1/2 w-1/2 text-stone-500"
+              icon="fa-solid fa-car"
             />
           </a>
         </div>
@@ -122,14 +123,11 @@ export default {
          sent out for delivery (or pickup)!",
       },
       RateMyPartner: {
-        greeting2: "RateMyPartner",
-        intro2: " Indexing Love",
-        msg2: 'What started out as a parody turned aspirational commercial \
-        goal. RateMyPartner (RMP), is a lofty goal inspired by RateMyProfessor.\
-        Essentially, it seeks to be a semi-comical social media site whereby lovers\
-        can "rate" their partners by commenting on the progress made in their relationship.\
-        The ultimate objective being to improve relationship quality by sharing experiences.\
-        ',
+        greeting2: "Luxurious Ride",
+        intro2: " Tantalizing Travels",
+        msg2: " A premimum ride-service with a commitment to fusing lux with motion and \
+        an online presence to match. The site showcases the various services provided \
+        and promises a quality, catered experience for their clients",
       },
       Fakazon: {
         greeting2: "Fake Amazon",
@@ -140,10 +138,10 @@ export default {
       },
       Github: {
         greeting2: "GitHub",
-        intro2: " The Entire History of Me",
-        msg2: 'My GitHub features additonal websites and plenty of non-web-dev programming\
-        feats. There\'s a bit going on there, but it mainly demonstrates my adeptness in\
-        my core tech stack, C#, C++, Java, Python and MySQL. Some notable projects are \
+        intro2: " The History of Me",
+        msg2: 'My GitHub features additonal sites non-web-dev programming\
+        feats. There\'s a quite a bit there, but it mainly demonstrates the adaptiveness in\
+        my non-web tech stack, C#, C++, Java, Python and MySQL. Some notable projects are \
         Shout-Box, Malloc, C# server-side code and CLAT. For better insight into my web \
         development abilities, see my "About Me" page!',
       },
